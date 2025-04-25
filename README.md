@@ -35,3 +35,11 @@ Jawaban :
 Kode tersebut menghasilkan stream warna yang berubah setiap 1 detik. Dengan Stream.periodic, setiap detik akan dihasilkan satu warna dari daftar colors, dimulai dari indeks 0 dan mengulang terus (dengan t % colors.length) agar warnanya bergantian secara siklus.
 
 -> Lakukan commit hasil jawaban Soal 3 dengan pesan "P1: Jawaban Soal 3"
+
+Soal 4
+
+-> Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+-> Lakukan commit hasil jawaban Soal 4 dengan pesan "P1: Jawaban Soal 4"
+
+![take](./images/p1s4.gif)
