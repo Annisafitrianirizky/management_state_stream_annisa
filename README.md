@@ -43,3 +43,13 @@ Soal 4
 -> Lakukan commit hasil jawaban Soal 4 dengan pesan "P1: Jawaban Soal 4"
 
 ![take](./images/p1s4.gif)
+
+
+Soal 5
+
+-> Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
+
+Jawaban :
+Perbedaan listen dan await for adalah pada cara mereka menangani stream. listen digunakan untuk mendaftarkan callback yang akan dijalankan setiap kali stream mengeluarkan data, dan tidak perlu berada di dalam fungsi async secara langsung. Sedangkan await for digunakan untuk mengiterasi stream secara asynchronous, jadi harus berada di dalam fungsi async, dan akan menunggu setiap data stream secara berurutan. Keduanya bisa digunakan untuk stream, tapi await for lebih cocok jika kita ingin menunggu dan memproses data satu per satu secara sinkron.
+
+-> Lakukan commit hasil jawaban Soal 5 dengan pesan "P1: Jawaban Soal 5"
