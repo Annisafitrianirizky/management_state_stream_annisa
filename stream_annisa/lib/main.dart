@@ -61,6 +61,10 @@ void changeColor() async {
       setState(() {
         lastNumber = event;
       });
+    }).onError((error) {
+      setState(() {
+        lastNumber = -1;
+      });
     });
     super.initState();
   }
@@ -73,8 +77,9 @@ void changeColor() async {
 
   void addRandomNumber() {
   Random random = Random();
-  int myNum = random.nextInt(10);
-  numberStream.addNumberToSink(myNum);
+  //int myNum = random.nextInt(10);
+  //numberStream.addNumberToSink(myNum);
+  numberStream.adderror(); // (soal7)
   }
 
   @override

@@ -68,3 +68,16 @@ Pada langkah 8, kode menampilkan angka terakhir (lastNumber) di layar dan menyed
 ![take4](./images/p2s6.gif)
 
 -> Lalu lakukan commit dengan pesan "P2: Jawaban Soal 6".
+
+
+Soal 7
+
+-> Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+
+jawaban :
+
+Pada langkah 13, fungsi adderror() digunakan untuk memasukkan error ke dalam stream dengan controller.sink.addError('error'). Di langkah 14, stream akan mendengarkan data masuk; jika data valid, nilai lastNumber diperbarui sesuai event, namun jika terjadi error, maka lastNumber diubah menjadi -1 sebagai penanda error. Di langkah 15, pemanggilan adderror() digunakan untuk menguji alur penanganan error tersebut.
+
+-> Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
+
+-> Lalu lakukan commit dengan pesan "P2: Jawaban Soal 7"
