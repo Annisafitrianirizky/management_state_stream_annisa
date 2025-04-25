@@ -18,3 +18,20 @@ Soal 2
 -> Lakukan commit hasil jawaban Soal 2 dengan pesan "P1: Jawaban Soal 2"
 
 ![take2](./images/p1s2.png)
+
+
+Soal 3
+
+-> Jelaskan fungsi keyword yield* pada kode tersebut!
+
+Jawaban :
+
+Keyword yield* digunakan untuk meneruskan (forward) hasil dari stream lain ke dalam stream ini. Dalam kode tersebut, yield* menyalurkan data dari Stream.periodic secara langsung sebagai bagian dari stream yang dihasilkan oleh getColors().
+
+-> Apa maksud isi perintah kode tersebut?
+
+Jawaban :
+
+Kode tersebut menghasilkan stream warna yang berubah setiap 1 detik. Dengan Stream.periodic, setiap detik akan dihasilkan satu warna dari daftar colors, dimulai dari indeks 0 dan mengulang terus (dengan t % colors.length) agar warnanya bergantian secara siklus.
+
+-> Lakukan commit hasil jawaban Soal 3 dengan pesan "P1: Jawaban Soal 3"
