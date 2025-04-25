@@ -42,7 +42,7 @@ Soal 4
 
 -> Lakukan commit hasil jawaban Soal 4 dengan pesan "P1: Jawaban Soal 4"
 
-![take](./images/p1s4.gif)
+![take3](./images/p1s4.gif)
 
 
 Soal 5
@@ -53,3 +53,18 @@ Jawaban :
 Perbedaan listen dan await for adalah pada cara mereka menangani stream. listen digunakan untuk mendaftarkan callback yang akan dijalankan setiap kali stream mengeluarkan data, dan tidak perlu berada di dalam fungsi async secara langsung. Sedangkan await for digunakan untuk mengiterasi stream secara asynchronous, jadi harus berada di dalam fungsi async, dan akan menunggu setiap data stream secara berurutan. Keduanya bisa digunakan untuk stream, tapi await for lebih cocok jika kita ingin menunggu dan memproses data satu per satu secara sinkron.
 
 -> Lakukan commit hasil jawaban Soal 5 dengan pesan "P1: Jawaban Soal 5"
+
+
+Soal 6
+
+-> Jelaskan maksud kode langkah 8 dan 10 tersebut!
+
+Jawaban :
+
+Pada langkah 8, kode menampilkan angka terakhir (lastNumber) di layar dan menyediakan tombol "New Random Number". Ketika tombol ditekan, fungsi addRandomNumber() di langkah 10 akan dipanggil. Fungsi ini membuat angka acak antara 0–9, lalu mengirimkannya ke stream melalui numberStream.addNumberToSink(myNum). Dengan ini, UI bisa diperbarui setiap kali angka baru ditambahkan ke stream.
+
+-> Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![take4](./images/p2s6.gif)
+
+-> Lalu lakukan commit dengan pesan "P2: Jawaban Soal 6".
