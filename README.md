@@ -131,3 +131,18 @@ Akibatnya, setiap kali menambahkan angka baru, hasilnya tampil dua kali.
 ![take8](./images/p5s11.gif)
 
 Lalu lakukan commit dengan pesan "P5: Jawaban Soal 10,11"
+
+
+Soal 12
+
+->Jelaskan maksud kode pada langkah 3 dan 7 !
+
+Jawaban :
+di langkah 3 membuat class NumberStream yang menghasilkan stream angka random setiap 1 detik menggunakan Stream.periodic. Sementara di langkah 7 menggunakan StreamBuilder untuk mendengarkan stream (numberStream) dan menampilkan angka terbaru secara otomatis di layar.
+Kalau ada data, angka ditampilkan besar di tengah layar.
+
+->Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![take9](./images/p6s12.gif)
+
+Lalu lakukan commit dengan pesan "P5: Jawaban Soal 12"
