@@ -108,3 +108,26 @@ Langkah 2 adalah Membuat stream angka, mendengarkan datanya, dan menyimpan angka
 ![take6](./images/p4s9.gif)
 
 -> Lalu lakukan commit dengan pesan "P4: Jawaban Soal 9"
+
+Soal 10
+
+![take7](./images/p5s10.jpeg)
+
+Jelaskan mengapa error itu bisa terjadi ?
+
+Jawaban :
+Itu karena stream yang didengarkan (listen), didengarkan dua kali. Tapi stream normal tidak boleh di-listen lebih dari sekali, kecuali kalau dia di broadcast.
+
+Soal 11
+
+->Jelaskan mengapa hal itu bisa terjadi ?
+
+Jawaban :
+Ada dua subscription ke satu stream (subscription dan subscription2) yang sama-sama update UI.
+Akibatnya, setiap kali menambahkan angka baru, hasilnya tampil dua kali.
+
+->Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![take8](./images/p5s11.gif)
+
+Lalu lakukan commit dengan pesan "P5: Jawaban Soal 10,11"
