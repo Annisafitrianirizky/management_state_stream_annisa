@@ -113,20 +113,20 @@ Soal 10
 
 ![take7](./images/p5s10.jpeg)
 
-Jelaskan mengapa error itu bisa terjadi ?
+-> Jelaskan mengapa error itu bisa terjadi ?
 
 Jawaban :
 Itu karena stream yang didengarkan (listen), didengarkan dua kali. Tapi stream normal tidak boleh di-listen lebih dari sekali, kecuali kalau dia di broadcast.
 
 Soal 11
 
-->Jelaskan mengapa hal itu bisa terjadi ?
+-> Jelaskan mengapa hal itu bisa terjadi ?
 
 Jawaban :
 Ada dua subscription ke satu stream (subscription dan subscription2) yang sama-sama update UI.
 Akibatnya, setiap kali menambahkan angka baru, hasilnya tampil dua kali.
 
-->Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+-> Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 
 ![take8](./images/p5s11.gif)
 
@@ -135,14 +135,28 @@ Lalu lakukan commit dengan pesan "P5: Jawaban Soal 10,11"
 
 Soal 12
 
-->Jelaskan maksud kode pada langkah 3 dan 7 !
+-> Jelaskan maksud kode pada langkah 3 dan 7 !
 
 Jawaban :
 di langkah 3 membuat class NumberStream yang menghasilkan stream angka random setiap 1 detik menggunakan Stream.periodic. Sementara di langkah 7 menggunakan StreamBuilder untuk mendengarkan stream (numberStream) dan menampilkan angka terbaru secara otomatis di layar.
 Kalau ada data, angka ditampilkan besar di tengah layar.
 
-->Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+-> Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 
 ![take9](./images/p6s12.gif)
 
 Lalu lakukan commit dengan pesan "P5: Jawaban Soal 12"
+
+
+Soal 13
+
+-> Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?
+
+Jawaban :
+Maksud dari praktikum ini adalah membuat aplikasi Flutter sederhana yang menggunakan pola BLoC untuk memisahkan logika pembuatan angka random dari tampilan UI. Letak konsep BLoC terdapat pada RandomNumberBloc menangani logika (generate angka random) dan menyediakan Stream untuk UI. sementara, RandomScreen hanya mendengarkan Stream dari BLoC untuk update tampilan, tanpa tahu proses logikanya.
+
+-> Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![take10](./images/p7s13.gif)
+
+-> Lalu lakukan commit dengan pesan "P7: Jawaban Soal 13".
