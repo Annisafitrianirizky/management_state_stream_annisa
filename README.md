@@ -81,3 +81,16 @@ Pada langkah 13, fungsi adderror() digunakan untuk memasukkan error ke dalam str
 -> Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
 
 -> Lalu lakukan commit dengan pesan "P2: Jawaban Soal 7"
+
+Soal 8
+
+-> Jelaskan maksud kode langkah 1-3 tersebut!
+
+Jawaban :
+Langkah 1–3 menggunakan StreamTransformer untuk memodifikasi aliran data sebelum diterima oleh listener. Di langkah 1, dibuat variabel transformer. Pada langkah 2, transformer dikonfigurasi agar setiap data int yang masuk dikalikan 10 (handleData), error akan diganti dengan nilai -1 (handleError), dan stream akan ditutup jika selesai (handleDone). Di langkah 3, stream dihubungkan ke transformer, lalu hasilnya dipantau dengan listen() agar nilai yang telah diubah bisa ditampilkan pada UI. Ini memungkinkan kontrol lebih besar terhadap data dan error yang mengalir ke dalam aplikasi.
+
+-> Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![take5](./images/p3s8.gif)
+
+-> Lalu lakukan commit dengan pesan "P3: Jawaban Soal 8".

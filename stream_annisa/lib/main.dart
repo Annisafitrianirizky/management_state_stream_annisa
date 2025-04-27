@@ -33,6 +33,11 @@ class StreamHomePage extends StatefulWidget {
 }
 
 class _StreamHomePageState extends State<StreamHomePage> {
+  late StreamSubscription subscription2;
+  String values = '';
+  late StreamSubscription subscription;
+  late StreamTransformer transformer;
+
   int lastNumber = 0;
   late StreamController numberStreamController;
   late NumberStream numberStream;
@@ -54,32 +59,66 @@ void changeColor() async {
     //colorStream = ColorStream();
     //changeColor(); // / (soal4)
 
+    //transformer = StreamTransformer<int, int>.fromHandlers(
+    //handleData: (value, sink) {
+      //sink.add(value * 10);
+    //},
+    //handleError: (error, trace, sink) {
+      //sink.add(-1);
+    //},
+    //handleDone: (sink) => sink.close(),
+  //); (prak 3)
+
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
-    Stream stream = numberStreamController.stream;
-    stream.listen((event) {
+    Stream stream = numberStreamController.stream.asBroadcastStream();
+    subscription = stream.listen((event) {
       setState(() {
-        lastNumber = event;
-      });
-    }).onError((error) {
-      setState(() {
-        lastNumber = -1;
+        //lastNumber = event;
+        values += '$event - ';
       });
     });
+
+    subscription2 = stream.listen((event) {
+      setState(() {
+        //lastNumber = event;
+        values += '$event - ';
+      });
+    });
+
     super.initState();
+    subscription.onError((error) {
+    setState(() {
+      lastNumber = -1;
+    });
+  });
+
+    subscription.onDone(() {
+      print('OnDone was called');
+    });
+  }
+
+  void stopStream() {
+    numberStreamController.close();
   }
 
   @override
   void dispose() {
-    numberStreamController.close();
+    subscription.cancel();
     super.dispose();
   }
 
   void addRandomNumber() {
   Random random = Random();
-  //int myNum = random.nextInt(10);
-  //numberStream.addNumberToSink(myNum);
-  numberStream.adderror(); // (soal7)
+  int myNum = random.nextInt(10);
+  if (!numberStreamController.isClosed) {
+  numberStream.addNumberToSink(myNum);
+  } else {
+    setState(() {
+      lastNumber = -1;
+    });
+  }
+  //numberStream.adderror(); // (soal7)
   }
 
   @override
@@ -94,10 +133,15 @@ void changeColor() async {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Text(values),
                 Text(lastNumber.toString()),
                 ElevatedButton(
                   onPressed: () => addRandomNumber(),
                   child: Text('New Random Number'),
+                ),
+                ElevatedButton(
+                  onPressed: () => stopStream(),
+                  child: Text('Stop Subscription'),
                 ),
               ],
             ),
