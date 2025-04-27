@@ -94,3 +94,17 @@ Langkah 1–3 menggunakan StreamTransformer untuk memodifikasi aliran data sebel
 ![take5](./images/p3s8.gif)
 
 -> Lalu lakukan commit dengan pesan "P3: Jawaban Soal 8".
+
+
+Soal 9
+
+-> Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+
+Jawaban :
+Langkah 2 adalah Membuat stream angka, mendengarkan datanya, dan menyimpan angka terakhir yang dikirim, untuk diupdate di UI. lalu di langkah 6 ada subscription.cancel(); dimana disaat widget dihapus dari layar (dispose), langganan (subscription) ke stream dihentikan. terakhir di langkah 8 adalah code yang dibuat untuk menambahkan angka random ke stream, atau menunjukkan error (-1) kalau stream sudah tidak aktif.
+
+-> Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![take6](./images/p4s9.gif)
+
+-> Lalu lakukan commit dengan pesan "P4: Jawaban Soal 9"

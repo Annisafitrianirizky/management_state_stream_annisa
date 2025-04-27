@@ -74,7 +74,7 @@ void changeColor() async {
     Stream stream = numberStreamController.stream.asBroadcastStream();
     subscription = stream.listen((event) {
       setState(() {
-        //lastNumber = event;
+        //lastNumber = event; //(soal 9)
         values += '$event - ';
       });
     });
